@@ -1,0 +1,89 @@
+.home-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  gap: 40px;
+}
+
+.left,
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  max-width: 520px;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* Right Side (Image Area) */
+.image-card {
+  width: 80%;
+  background: #f5f5f5;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-card img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+  .home-container {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .image-card {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 2.4rem;
+  }
+}
+.social-icons {
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.icon svg {
+  width: 32px;
+  height: 32px;
+  fill: #444;
+  transition: 0.3s ease;
+}
+
+/* Hover effects */
+.icon.fb:hover svg {
+  fill: #1877f2;
+  transform: scale(1.15);
+}
+
+.icon.gh:hover svg {
+  fill: #000;
+  transform: scale(1.15);
+}

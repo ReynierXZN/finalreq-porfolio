@@ -1,0 +1,100 @@
+.firstgrading-container {
+  background-color: #000;
+  color: #fff;
+  padding: 40px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center all content horizontally */
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Vertical Acts Container */
+.grading-acts-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 90%; /* limit content width */
+  max-width: 900px; /* keeps it neat on large screens */
+}
+
+/* Each Act Card */
+.act-card {
+  background-color: #111;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.act-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+.act-card h2 {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  color: #fff; /* changed from blue to white */
+}
+
+/* Image Placeholder */
+.image-placeholder {
+  width: 100%;
+  max-height: 600px; /* prevents it from getting too tall */
+  background-color: #222;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-placeholder img {
+  width: auto;       /* scale to fit width automatically */
+  max-width: 100%;   /* do not exceed container width */
+  height: auto;      /* maintain aspect ratio */
+  max-height: 600px; /* prevent images from being too tall */
+  border-radius: 10px;
+  display: block;
+}
+
+/* Exam Link Panel */
+.exam-link-panel {
+  margin-top: 15px;
+  background-color: #222;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.exam-link-panel p {
+  margin: 0 0 10px 0;
+}
+
+.exam-link-panel .link-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 8px;
+  background-color: #555; /* neutral gray instead of blue */
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.exam-link-panel .link-btn:hover {
+  background-color: #777; /* slightly lighter gray on hover */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}

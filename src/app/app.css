@@ -1,0 +1,109 @@
+/* --- ANIMATIONS --- */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* --- NAVBAR CONTAINER --- */
+.navbar {
+  width: 100%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #111; /* Dark background */
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05); /* Soft light shadow */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  animation: fadeIn 0.7s ease-out;
+}
+
+/* --- LOGO --- */
+.logo {
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 0;
+  color: #fff; /* White text */
+  animation: slideIn 0.8s ease-out;
+}
+
+/* --- NAV LINKS --- */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Animate each nav item */
+.nav-links li {
+  opacity: 0;
+  animation: slideIn 0.8s ease-out forwards;
+}
+
+/* Delay each item slightly */
+.nav-links li:nth-child(1) { animation-delay: 0.2s; }
+.nav-links li:nth-child(2) { animation-delay: 0.3s; }
+.nav-links li:nth-child(3) { animation-delay: 0.4s; }
+.nav-links li:nth-child(4) { animation-delay: 0.5s; }
+
+/* --- NAV LINKS --- */
+.nav-links li a {
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #fff; /* White text */
+  padding: 8px 12px;
+  border-radius: 6px;
+  position: relative;
+  transition: 0.25s ease;
+}
+
+/* --- ANIMATED UNDERLINE --- */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 3px;
+  background: #555; /* neutral gray underline instead of blue */
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Hover text color */
+.nav-links li a:hover {
+  color: #ccc; /* light gray on hover instead of blue */
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 850px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav-links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
